@@ -11,8 +11,7 @@ import SwiftData
 @main
 struct MoodTodayApp: App {
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
+        let schema = Schema([ DailyEntry.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +24,7 @@ struct MoodTodayApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            JournalListViews()
         }
         .modelContainer(sharedModelContainer)
     }

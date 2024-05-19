@@ -15,6 +15,14 @@
 		CA78CFD62BEFC3BC00213537 /* MoodTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFD52BEFC3BC00213537 /* MoodTodayTests.swift */; };
 		CA78CFE02BEFC3BC00213537 /* MoodTodayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFDF2BEFC3BC00213537 /* MoodTodayUITests.swift */; };
 		CA78CFE22BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFE12BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift */; };
+		CA78CFEF2BEFC3D800213537 /* MoodJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFEE2BEFC3D800213537 /* MoodJournalView.swift */; };
+		CA83A2202BF98E2200D5C48F /* JournalListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83A21F2BF98E2200D5C48F /* JournalListViews.swift */; };
+		CA83A2242BF9A8BB00D5C48F /* EditTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83A2232BF9A8BB00D5C48F /* EditTitleView.swift */; };
+		CA83A2962BF9AD1C00D5C48F /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83A2612BF9AD1C00D5C48F /* AudioManager.swift */; };
+		CA83A29B2BF9B02A00D5C48F /* deleteSFXMood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA83A2992BF9B02A00D5C48F /* deleteSFXMood.mp3 */; };
+		CA83A29E2BF9B0B200D5C48F /* CompleteSFXMood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA83A29D2BF9B0B200D5C48F /* CompleteSFXMood.mp3 */; };
+		CA83A2A12BF9B29E00D5C48F /* HighPop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA83A29F2BF9B29E00D5C48F /* HighPop.mp3 */; };
+		CA83A2A22BF9B29E00D5C48F /* LowPop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA83A2A02BF9B29E00D5C48F /* LowPop.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +54,14 @@
 		CA78CFDB2BEFC3BC00213537 /* MoodTodayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodTodayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA78CFDF2BEFC3BC00213537 /* MoodTodayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTodayUITests.swift; sourceTree = "<group>"; };
 		CA78CFE12BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTodayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA78CFEE2BEFC3D800213537 /* MoodJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodJournalView.swift; sourceTree = "<group>"; };
+		CA83A21F2BF98E2200D5C48F /* JournalListViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListViews.swift; sourceTree = "<group>"; };
+		CA83A2232BF9A8BB00D5C48F /* EditTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTitleView.swift; sourceTree = "<group>"; };
+		CA83A2612BF9AD1C00D5C48F /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		CA83A2992BF9B02A00D5C48F /* deleteSFXMood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deleteSFXMood.mp3; sourceTree = "<group>"; };
+		CA83A29D2BF9B0B200D5C48F /* CompleteSFXMood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CompleteSFXMood.mp3; sourceTree = "<group>"; };
+		CA83A29F2BF9B29E00D5C48F /* HighPop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HighPop.mp3; sourceTree = "<group>"; };
+		CA83A2A02BF9B29E00D5C48F /* LowPop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LowPop.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +114,10 @@
 			children = (
 				CA78CFC22BEFC3BA00213537 /* MoodTodayApp.swift */,
 				CA78CFC42BEFC3BA00213537 /* ContentView.swift */,
+				CA78CFEE2BEFC3D800213537 /* MoodJournalView.swift */,
+				CA83A21F2BF98E2200D5C48F /* JournalListViews.swift */,
+				CA83A2232BF9A8BB00D5C48F /* EditTitleView.swift */,
+				CA83A2622BF9AD1C00D5C48F /* Sounds */,
 				CA78CFC62BEFC3BA00213537 /* Item.swift */,
 				CA78CFC82BEFC3BB00213537 /* Assets.xcassets */,
 				CA78CFCA2BEFC3BB00213537 /* Preview Content */,
@@ -128,6 +148,18 @@
 				CA78CFE12BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift */,
 			);
 			path = MoodTodayUITests;
+			sourceTree = "<group>";
+		};
+		CA83A2622BF9AD1C00D5C48F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CA83A29D2BF9B0B200D5C48F /* CompleteSFXMood.mp3 */,
+				CA83A29F2BF9B29E00D5C48F /* HighPop.mp3 */,
+				CA83A2A02BF9B29E00D5C48F /* LowPop.mp3 */,
+				CA83A2992BF9B02A00D5C48F /* deleteSFXMood.mp3 */,
+				CA83A2612BF9AD1C00D5C48F /* AudioManager.swift */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +266,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA83A29B2BF9B02A00D5C48F /* deleteSFXMood.mp3 in Resources */,
 				CA78CFCC2BEFC3BB00213537 /* Preview Assets.xcassets in Resources */,
+				CA83A2A12BF9B29E00D5C48F /* HighPop.mp3 in Resources */,
+				CA83A2A22BF9B29E00D5C48F /* LowPop.mp3 in Resources */,
 				CA78CFC92BEFC3BB00213537 /* Assets.xcassets in Resources */,
+				CA83A29E2BF9B0B200D5C48F /* CompleteSFXMood.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA78CFC52BEFC3BA00213537 /* ContentView.swift in Sources */,
+				CA83A2962BF9AD1C00D5C48F /* AudioManager.swift in Sources */,
+				CA78CFEF2BEFC3D800213537 /* MoodJournalView.swift in Sources */,
 				CA78CFC72BEFC3BA00213537 /* Item.swift in Sources */,
+				CA83A2202BF98E2200D5C48F /* JournalListViews.swift in Sources */,
 				CA78CFC32BEFC3BA00213537 /* MoodTodayApp.swift in Sources */,
+				CA83A2242BF9A8BB00D5C48F /* EditTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

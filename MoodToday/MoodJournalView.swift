@@ -21,46 +21,52 @@ enum MoodType : Int, CaseIterable, Codable, Identifiable {
             return "😭 Sad"
         case .okay:
             return "Insert Icon"
-        
+            
         }
     }
 }
 @Model
 class DailyEntry {
     var name = "Nothing"
+    var story = "Nothing written"
     var moods : MoodType = MoodType.okay
-    init(name: String = "Nothing", moods: MoodType = .okay) {
+    init(name: String = "Nothing", moods: MoodType = .okay, story: String = "Nothing written") {
         self.name = name
         self.moods = moods
+        self.story = story
     }
 }
 /*
  Code-able, can make something work with swift data
  */
 struct MoodJournalView: View {
-    var audio = AudioManager()
+    let audio = AudioManager()
     @State private var moodtype : MoodType = MoodType.happy
     @Bindable var examinedDay : DailyEntry
+    
     var body: some View {
+        
         VStack{
+            
             NavigationLink {
                 EditTitleView(examinedDay: examinedDay)
             } label: {
                 Text(examinedDay.name)
             }
+            
+            TextField("Write here", text: $examinedDay.name)
             Picker("moodtype", selection: $moodtype){
                 ForEach(MoodType.allCases){ type in
                     Text(type.text)
                 }
                 .onChange(of: moodtype) { newValue in
-//                    if moodtype == .annoyed || moodtype == .sad {
-//                        audio.playSFX(.leftTap)
-//                    }
+                    //
                     audio.playSFX(.rightTap)
-                            }
+                }
             }.pickerStyle(.segmented)
         }
     }
+    
 }
 
 

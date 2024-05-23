@@ -10,8 +10,11 @@ import SwiftData
 struct EditTitleView: View {
     @Bindable var examinedDay : DailyEntry
     var body: some View {
-        VStack{
-            TextField("Type", text: $examinedDay.name)
+        NavigationStack{
+            VStack{
+                //   Text("Day \(examinedDay.name) was \($examinedDay.mood.text)")
+                TextField(examinedDay.story, text: $examinedDay.story)
+            }
         }
     }
 }

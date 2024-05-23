@@ -7,23 +7,36 @@
 
 import SwiftUI
 import SwiftData
-
-struct JournalListViews: View {
-    var audio = AudioManager()
-    @Environment(\.modelContext) private var modelContext
-    @Query private var hotels: [DailyEntry]
+struct MoodListRowView : View {
+    var examinedDay : DailyEntry
+    
     var body: some View {
         VStack{
-            Text("Today")
-            Button("Delete"){
-                audio.playSFX(.deleteSFX)
-            }
-            Button("Add"){
-                audio.playSFX(.completeSFX)
-            }
+            Text(examinedDay.name)
+            Text(examinedDay.moods.text)
+        }
+    }
+}
+struct JournalListViews: View {
+    let audio = AudioManager()
+    @Environment(\.modelContext) private var modelContext
+    @Query private var entries: [DailyEntry]
+    var body: some View {
+        NavigationStack{
             List{
-                ForEach(hotels){ day in
-                    MoodJournalView(examinedDay: day)
+                ForEach(entries){ day in
+                    NavigationLink {
+                        MoodJournalView(examinedDay: day)
+                    } label: {
+                        MoodListRowView(examinedDay: day)
+                    }
+                }
+            }
+            .navigationTitle("Journal List View")
+            .toolbar{
+                Button("Add"){
+                    audio.playSFX(.completeSFX)
+                    addItem()
                 }
             }
         }
@@ -34,11 +47,11 @@ struct JournalListViews: View {
             modelContext.insert(newItem)
         }
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(hotels[index])
+                modelContext.delete(entries[index])
             }
         }
     }
@@ -47,7 +60,7 @@ struct JournalListViews: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: DailyEntry.self, configurations: config)
-    container.mainContext.insert(DailyEntry())
+    container.mainContext.insert(DailyEntry(name: "BDay"))
     container.mainContext.insert(DailyEntry())
     return JournalListViews()
         .modelContainer(container)

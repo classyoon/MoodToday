@@ -8,17 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CA78CFC32BEFC3BA00213537 /* MoodTodayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFC22BEFC3BA00213537 /* MoodTodayApp.swift */; };
-		CA78CFC52BEFC3BA00213537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFC42BEFC3BA00213537 /* ContentView.swift */; };
-		CA78CFC72BEFC3BA00213537 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFC62BEFC3BA00213537 /* Item.swift */; };
 		CA78CFC92BEFC3BB00213537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA78CFC82BEFC3BB00213537 /* Assets.xcassets */; };
 		CA78CFCC2BEFC3BB00213537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA78CFCB2BEFC3BB00213537 /* Preview Assets.xcassets */; };
 		CA78CFD62BEFC3BC00213537 /* MoodTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFD52BEFC3BC00213537 /* MoodTodayTests.swift */; };
 		CA78CFE02BEFC3BC00213537 /* MoodTodayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFDF2BEFC3BC00213537 /* MoodTodayUITests.swift */; };
 		CA78CFE22BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFE12BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift */; };
-		CA78CFEF2BEFC3D800213537 /* MoodJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78CFEE2BEFC3D800213537 /* MoodJournalView.swift */; };
-		CA7BB77A2BFEBC8500CACBAE /* MockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BB7792BFEBC8500CACBAE /* MockListView.swift */; };
-		CA83A2202BF98E2200D5C48F /* JournalListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83A21F2BF98E2200D5C48F /* JournalListViews.swift */; };
-		CA83A2242BF9A8BB00D5C48F /* EditTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83A2232BF9A8BB00D5C48F /* EditTitleView.swift */; };
+		CA7BB77C2BFEBF3700CACBAE /* DayEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BB77B2BFEBF3700CACBAE /* DayEditView.swift */; };
+		CA7BB77F2BFEC21D00CACBAE /* DailyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7BB77E2BFEC21D00CACBAE /* DailyEntry.swift */; };
+		CA83A2202BF98E2200D5C48F /* DayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83A21F2BF98E2200D5C48F /* DayListView.swift */; };
 		CA83A2962BF9AD1C00D5C48F /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83A2612BF9AD1C00D5C48F /* AudioManager.swift */; };
 		CA83A29B2BF9B02A00D5C48F /* deleteSFXMood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA83A2992BF9B02A00D5C48F /* deleteSFXMood.mp3 */; };
 		CA83A29E2BF9B0B200D5C48F /* CompleteSFXMood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA83A29D2BF9B0B200D5C48F /* CompleteSFXMood.mp3 */; };
@@ -46,8 +43,6 @@
 /* Begin PBXFileReference section */
 		CA78CFBF2BEFC3BA00213537 /* MoodToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA78CFC22BEFC3BA00213537 /* MoodTodayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTodayApp.swift; sourceTree = "<group>"; };
-		CA78CFC42BEFC3BA00213537 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CA78CFC62BEFC3BA00213537 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CA78CFC82BEFC3BB00213537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA78CFCB2BEFC3BB00213537 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA78CFD12BEFC3BC00213537 /* MoodTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,10 +50,9 @@
 		CA78CFDB2BEFC3BC00213537 /* MoodTodayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodTodayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA78CFDF2BEFC3BC00213537 /* MoodTodayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTodayUITests.swift; sourceTree = "<group>"; };
 		CA78CFE12BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTodayUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CA78CFEE2BEFC3D800213537 /* MoodJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodJournalView.swift; sourceTree = "<group>"; };
-		CA7BB7792BFEBC8500CACBAE /* MockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListView.swift; sourceTree = "<group>"; };
-		CA83A21F2BF98E2200D5C48F /* JournalListViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListViews.swift; sourceTree = "<group>"; };
-		CA83A2232BF9A8BB00D5C48F /* EditTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTitleView.swift; sourceTree = "<group>"; };
+		CA7BB77B2BFEBF3700CACBAE /* DayEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEditView.swift; sourceTree = "<group>"; };
+		CA7BB77E2BFEC21D00CACBAE /* DailyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEntry.swift; sourceTree = "<group>"; };
+		CA83A21F2BF98E2200D5C48F /* DayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListView.swift; sourceTree = "<group>"; };
 		CA83A2612BF9AD1C00D5C48F /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		CA83A2992BF9B02A00D5C48F /* deleteSFXMood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deleteSFXMood.mp3; sourceTree = "<group>"; };
 		CA83A29D2BF9B0B200D5C48F /* CompleteSFXMood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CompleteSFXMood.mp3; sourceTree = "<group>"; };
@@ -115,13 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				CA78CFC22BEFC3BA00213537 /* MoodTodayApp.swift */,
-				CA78CFC42BEFC3BA00213537 /* ContentView.swift */,
-				CA78CFEE2BEFC3D800213537 /* MoodJournalView.swift */,
-				CA83A21F2BF98E2200D5C48F /* JournalListViews.swift */,
-				CA83A2232BF9A8BB00D5C48F /* EditTitleView.swift */,
-				CA7BB7792BFEBC8500CACBAE /* MockListView.swift */,
+				CA83A21F2BF98E2200D5C48F /* DayListView.swift */,
+				CA7BB77B2BFEBF3700CACBAE /* DayEditView.swift */,
+				CA7BB77D2BFEC1F800CACBAE /* Models */,
 				CA83A2622BF9AD1C00D5C48F /* Sounds */,
-				CA78CFC62BEFC3BA00213537 /* Item.swift */,
 				CA78CFC82BEFC3BB00213537 /* Assets.xcassets */,
 				CA78CFCA2BEFC3BB00213537 /* Preview Content */,
 			);
@@ -151,6 +142,14 @@
 				CA78CFE12BEFC3BC00213537 /* MoodTodayUITestsLaunchTests.swift */,
 			);
 			path = MoodTodayUITests;
+			sourceTree = "<group>";
+		};
+		CA7BB77D2BFEC1F800CACBAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BB77E2BFEC21D00CACBAE /* DailyEntry.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CA83A2622BF9AD1C00D5C48F /* Sounds */ = {
@@ -299,14 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA78CFC52BEFC3BA00213537 /* ContentView.swift in Sources */,
+				CA7BB77F2BFEC21D00CACBAE /* DailyEntry.swift in Sources */,
 				CA83A2962BF9AD1C00D5C48F /* AudioManager.swift in Sources */,
-				CA78CFEF2BEFC3D800213537 /* MoodJournalView.swift in Sources */,
-				CA78CFC72BEFC3BA00213537 /* Item.swift in Sources */,
-				CA83A2202BF98E2200D5C48F /* JournalListViews.swift in Sources */,
+				CA83A2202BF98E2200D5C48F /* DayListView.swift in Sources */,
 				CA78CFC32BEFC3BA00213537 /* MoodTodayApp.swift in Sources */,
-				CA7BB77A2BFEBC8500CACBAE /* MockListView.swift in Sources */,
-				CA83A2242BF9A8BB00D5C48F /* EditTitleView.swift in Sources */,
+				CA7BB77C2BFEBF3700CACBAE /* DayEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

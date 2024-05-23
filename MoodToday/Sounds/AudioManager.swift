@@ -7,12 +7,13 @@
 
 import Foundation
 import AVFoundation
-//let kurtSong = Bundle.main.url(forResource: "Kurt - Cheel", withExtension: "mp3")
-//var musicPlayer = try? AVAudioPlayer(contentsOf: (kurtSong!))
 class AudioManager: ObservableObject {
-    //TODO: Make slow things in audiomanager asynchronous
     static let shared = AudioManager()
-    
+    private init() {
+        let clock = ContinuousClock()
+        print("loadSFX: \(clock.measure(loadSFX))")
+        print("loadSongs: \(clock.measure(loadSongs))")
+    }
     enum SFXTag: String, CaseIterable {
         case completeSFX = "CompleteSFXMood"
         case deleteSFX = "deleteSFXMood"
@@ -54,12 +55,7 @@ class AudioManager: ObservableObject {
         }
     }
 
-    init() {
-        let clock = ContinuousClock()
-        print("loadSFX: \(clock.measure(loadSFX))")
-        print("loadSongs: \(clock.measure(loadSongs))")
-    }
-
+  
     func playMusic(_ songName: String, after seconds: Double) {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.playMusic(songName)

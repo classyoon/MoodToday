@@ -7,18 +7,18 @@
 
 import SwiftUI
 import SwiftData
-struct MoodListRowView : View {
+struct DayRowView : View {
     var examinedDay : DailyEntry
     
     var body: some View {
-        VStack{
-            Text(examinedDay.name)
+        VStack(alignment: .leading) {
+            Text(examinedDay.name).bold()
             Text(examinedDay.moods.text)
         }
     }
 }
-struct JournalListViews: View {
-    let audio = AudioManager()
+struct DayListView: View {
+    let audio = AudioManager.shared
     @Environment(\.modelContext) private var modelContext
     @Query private var entries: [DailyEntry]
     var body: some View {
@@ -26,9 +26,9 @@ struct JournalListViews: View {
             List{
                 ForEach(entries){ day in
                     NavigationLink {
-                        MoodJournalView(examinedDay: day)
+                       DayEditView(day: day, delete: deleteDay)
                     } label: {
-                        MoodListRowView(examinedDay: day)
+                        DayRowView(examinedDay: day)
                     }
                 }
             }
@@ -55,6 +55,11 @@ struct JournalListViews: View {
             }
         }
     }
+    private func deleteDay(day : DailyEntry){
+        withAnimation{
+            modelContext.delete(day)
+        }
+    }
 }
 
 #Preview {
@@ -62,6 +67,6 @@ struct JournalListViews: View {
     let container = try! ModelContainer(for: DailyEntry.self, configurations: config)
     container.mainContext.insert(DailyEntry(name: "BDay"))
     container.mainContext.insert(DailyEntry())
-    return JournalListViews()
+    return DayListView()
         .modelContainer(container)
 }

@@ -24,7 +24,7 @@ struct MoodTodayApp: App {
 
     var body: some Scene {
         WindowGroup {
-            JournalListViews()
+            DayListView()
         }
         .modelContainer(sharedModelContainer)
     }

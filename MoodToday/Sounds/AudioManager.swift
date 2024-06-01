@@ -34,7 +34,7 @@ class AudioManager: ObservableObject {
         }
     }
 
-    @Published var musicVolume: Float = 0.1 {
+    @Published var musicVolume: Float = 1.0 {
         didSet {
             musicPlayer?.volume = musicMute ? 0 : musicVolume
             print("Mute : \(musicMute)")
@@ -90,12 +90,11 @@ class AudioManager: ObservableObject {
                 }
             }
         }
-        
     }
-
     private func loadSongs() {
         songList = [:]
     }
+
 
     func playSFX(_ tag: SFXTag) {
         guard let player = soundPlayers[tag.rawValue] else {
@@ -107,7 +106,16 @@ class AudioManager: ObservableObject {
         player.currentTime = 0
         player.play()
     }
+    
+    
+    func pauseMusic() {
+        musicPlayer?.pause()
+    }
 
+    func resumeMusic() {
+        musicPlayer?.play()
+    }
+    
     func playMusic(_ name: String) {
         if let url = songList[name] {
             print("Playing music: \(name)")
@@ -130,13 +138,6 @@ class AudioManager: ObservableObject {
         }
     }
 
-    func pauseMusic() {
-        musicPlayer?.pause()
-    }
-
-    func resumeMusic() {
-        musicPlayer?.play()
-    }
 
     static func soundURL(_ name: String) -> URL {
         let defaultExt = "mp3"
